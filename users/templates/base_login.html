@@ -1,7 +1,7 @@
 <html lang="en" data-bs-theme="light" style="color-scheme: light;"><!--begin::Head-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>SAG</title>
+    <title>SAGIS</title>
     {% load static %}
 
     <!--begin::Theme Init (prevents flash of incorrect theme on load, #6043)-->
@@ -63,59 +63,10 @@
 <!--end::Head-->
 <!--begin::Body-->
 <body class="login-page bg-body-secondary app-loaded">
-<div class="login-box">
-    <div class="card card-outline card-primary">
-        <div class="d-flex flex-column align-items-center mt-4">
-            <img
-                    class="mb-2"
-                    src="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/building-community.svg"
-                    alt="ERP"
-                    width="70"
-                    height="70"
-            >
+{% block content %}
 
-            <h3 class="mb-0 fw-bold">ERP</h3>
-            <h4 class="text-muted">Sistema de Administración y Gestión</h4>
-        </div>
-        <div class="card-body login-card-body pt-0">
-            {% include 'core/components/messages.html' %}
+{% endblock %}
 
-            <p class="login-box-msg">Inicia sesión con tus credenciales</p>
-
-            <form method="post" id="loginForm">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <!--begin::Row-->
-                <div class="row">
-                    <div class="col-4 d-inline-flex align-items-center">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="remember_me" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">Recuerdame</label>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-8">
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!--end::Row-->
-            </form>
-
-            <!-- /.social-auth-links -->
-
-            <p class="mb-1">
-                <a href="">¿Olvidó su contraseña?</a>
-            </p>
-            <p class="mb-0">
-                <a class="text-center" href="">Registrate</a>
-            </p>
-        </div>
-        <!-- /.login-card-body -->
-    </div>
-</div>
 <!-- /.login-box -->
 
 <!--begin::Third Party Plugin(OverlayScrollbars)-->

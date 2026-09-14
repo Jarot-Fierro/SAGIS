@@ -1,34 +1,27 @@
-UNITS = [
-    {'name': 'Unidad', 'symbol': 'UN'},
-    {'name': 'Caja', 'symbol': 'CJ'},
-    {'name': 'Paquete', 'symbol': 'PQ'},
-    {'name': 'Kilogramo', 'symbol': 'KG'},
-    {'name': 'Gramo', 'symbol': 'GR'},
-    {'name': 'Litro', 'symbol': 'LT'},
-    {'name': 'Mililitro', 'symbol': 'ML'},
-]
-COUNTRIES = [
-    {'name': 'Chile'},
-    {'name': 'Estados Unidos'},
-    {'name': 'España'},
-    {'name': 'Argentina'},
-]
-CURRENCIES = [
+ESTABLISHMENTS = [
     {
-        'name': 'Peso Chileno',
-        'symbol': '$'
+        'name': 'Servicio de Salud Arauco',
+        'run': '61.954.500-1',
     },
     {
-        'name': 'Dólar Estadounidense',
-        'symbol': 'US$'
+        'name': 'Hospital de Curanilahue',
+        'run': '61.602.211-3',
     },
     {
-        'name': 'Euro',
-        'symbol': '€'
+        'name': 'Hospital de Arauco',
+        'run': '61.602.209-1',
     },
     {
-        'name': 'Peso Argentino',
-        'symbol': 'ARS$'
+        'name': 'Hospital de Lebu',
+        'run': '61.602.212-1',
+    },
+    {
+        'name': 'Hospital Cañete',
+        'run': '61.602.213-K',
+    },
+    {
+        'name': 'Hospital de Contulmo',
+        'run': '61.607.103-3',
     },
 ]
 
@@ -50,20 +43,9 @@ AVATARS = [
         'filename': 'male_2.svg',
     },
 ]
-ACCOUNT_TYPE = [
-    {'name': 'VISA'},
-    {'name': 'CREDITO'},
-]
 ROLES = [
     {
         'name': 'ADMINISTRADOR',
-        'customers': 3,
-        'suppliers': 3,
-        'products': 3,
-        'purchases': 3,
-        'sales': 3,
-        'inventory': 3,
-        'accounting': 3,
-        'reporting': 3,
+        'kardex': 3,
     },
 ]

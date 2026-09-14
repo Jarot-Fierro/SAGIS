@@ -97,45 +97,10 @@ class Role(StandardModelEstablishment):
     name = models.CharField(
         max_length=200,
         verbose_name='Nombre del Rol')
-    customers = models.IntegerField(
+    kardex = models.IntegerField(
         choices=PERMISION_CHOICES,
         default=0,
-        verbose_name='Clientes'
-    )
-    suppliers = models.IntegerField(
-        choices=PERMISION_CHOICES,
-        default=0,
-        verbose_name='Proveedores'
-    )
-    products = models.IntegerField(
-        choices=PERMISION_CHOICES,
-        default=0,
-        verbose_name='Productos'
-    )
-    purchases = models.IntegerField(
-        choices=PERMISION_CHOICES,
-        default=0,
-        verbose_name='Compras'
-    )
-    sales = models.IntegerField(
-        choices=PERMISION_CHOICES,
-        default=0,
-        verbose_name='Ventas'
-    )
-    inventory = models.IntegerField(
-        choices=PERMISION_CHOICES,
-        default=0,
-        verbose_name='Inventario'
-    )
-    accounting = models.IntegerField(
-        choices=PERMISION_CHOICES,
-        default=0,
-        verbose_name='Contabilidad'
-    )
-    reporting = models.IntegerField(
-        choices=PERMISION_CHOICES,
-        default=0,
-        verbose_name='Reportes'
+        verbose_name='Kardex'
     )
 
     def __str__(self):

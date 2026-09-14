@@ -4,9 +4,8 @@ from django.conf import settings
 from django.core.files import File
 from django.core.management.base import BaseCommand
 
-from accounting.models import AccountType
 from core.management.commands.vars import *
-from core.models import Unit, Country, Currency
+from organization.models import Establishment
 from users.models import Avatar, User, Role
 
 
@@ -14,30 +13,10 @@ class Command(BaseCommand):
     help = 'Carga los datos iniciales del sistema'
 
     def handle(self, *args, **options):
-
-        for data in UNITS:
-            Unit.objects.get_or_create(
+        for data in ESTABLISHMENTS:
+            Establishment.objects.get_or_create(
                 name=data['name'],
-                defaults={
-                    'symbol': data['symbol']
-                }
-            )
-
-        for data in COUNTRIES:
-            Country.objects.get_or_create(
-                name=data['name']
-            )
-
-        for data in CURRENCIES:
-            Currency.objects.get_or_create(
-                name=data['name'],
-                defaults={
-                    'symbol': data['symbol']
-                }
-            )
-        for data in ACCOUNT_TYPE:
-            AccountType.objects.get_or_create(
-                name=data['name'],
+                run=data['run'],
             )
 
         avatars_path = (
@@ -71,14 +50,7 @@ class Command(BaseCommand):
             Role.objects.get_or_create(
                 name=data['name'],
                 defaults={
-                    'customers': data['customers'],
-                    'suppliers': data['suppliers'],
-                    'products': data['products'],
-                    'purchases': data['purchases'],
-                    'sales': data['sales'],
-                    'inventory': data['inventory'],
-                    'accounting': data['accounting'],
-                    'reporting': data['reporting'],
+                    'kardex': data['kardex'],
                 }
             )
 

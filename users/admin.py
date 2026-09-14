@@ -64,14 +64,7 @@ class UserAdmin(BaseUserAdmin, StandardAdmin):
 class RoleAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'customers',
-        'suppliers',
-        'products',
-        'purchases',
-        'sales',
-        'inventory',
-        'accounting',
-        'reporting'
+        'kardex',
     )
 
 
