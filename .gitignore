@@ -28,6 +28,7 @@ build/
 
 # Media / archivos subidos
 uploads/
+upload/
 media/
 
 # Staticfiles colectivos (se generan)
