@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block styles %}
+    <style>
+
+        /* Columna: NO se transforma */
+        .module-card {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        /* Elemento que realmente crece */
+        .module-card-content {
+            position: relative;
+            z-index: 1;
+
+            transition: transform 0.2s ease,
+            box-shadow 0.2s ease;
+
+            transform-origin: center center;
+        }
+
+
+        /* Primera tarjeta */
+        .module-card:first-child .module-card-content:hover {
+            transform: scale(1.05);
+            transform-origin: left center;
+            z-index: 10;
+        }
+
+
+        /* Última tarjeta de cada fila */
+        .module-card:nth-child(6n) .module-card-content:hover {
+            transform: scale(1.05);
+            transform-origin: right center;
+            z-index: 10;
+        }
+
+
+        /* Tarjetas intermedias */
+        .module-card:not(:first-child):not(:nth-child(6n))
+        .module-card-content:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+
+        /* Info box */
+        .module-card .info-box {
+            transition: box-shadow 0.2s ease;
+            overflow: visible;
+        }
+
+
+        .module-card-content:hover .info-box {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* Imagen */
+        .module-card .info-box-icon img {
+            transition: transform 0.2s ease;
+        }
+
+
+        .module-card-content:hover .info-box-icon img {
+            transform: scale(1.08);
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 module-card">
+
+                <div class="module-card-content">
+
+                    <a href=""
+                       class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+
+                        <div class="info-box">
+
+                <span class="info-box-icon shadow-sm">
+                    <img src="{% static 'core/img/kardex.svg' %}"
+                         alt="Kardex">
+                </span>
+
+                            <div class="info-box-content">
+                    <span class="info-box-text">
+                        Kardex
+                    </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
